@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript" src="act.js" defer></script>
+    <script type="text/javascript" src="sm1.js" defer></script>
+    <script type="text/javascript" src="sm1worker.js" defer></script>
+    <style>
+        #myCanvas {
+            float: left;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            
+        }
+    </style>
+</head>
+<body id="sbd">
+
+    <div >
+
+
+        <canvas id="myCanvas" width="700" height="500"
+        onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"></canvas>
+
+
+        <div id="xycoordinates" style="position: absolute; left: 55px; top: 520px"></div>
+        <br>
+
+        <button style="position: absolute; top:520px;" onclick="startWorker();">开始</button>
+        <button style="position: absolute; top:550px;" onclick="stopWorker();">stop</button>
+    </div>
+</body>
+</html>
