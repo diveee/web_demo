@@ -1,25 +1,15 @@
 
-
 //snake dot
 let snakedot = [[340,240],[350,240]];
 let whilehead = [[340,240]];
 // let bodydot = [];
 let fooddot = [[50,50]];
 let keyCodes = 'ArrowLeft';
-// game over dot
-/**
- * let overdots = [
-    [180,80],[170,80],[160,80],[150,80],[140,80],
-    [140,90],[140,100],[140,110],[140,120],[140,130],
-    [180,130],[170,130],[160,130],[150,130],[140,130],
-    [180,120],[180,110],[180,100],[170,100],[160,100]];
- */
+
 
 function startmove(){
 
-
     if(snakedot[0][0]>0 && snakedot[0][0]<690 && snakedot[0][1]>0 && snakedot[0][1]<490) {
-
         //把头坐标放在暂存头
         switch(keyCodes) {
             case 'ArrowUp' ://up
@@ -46,13 +36,11 @@ function startmove(){
             snakedot.unshift(whilehead[0]);
             delfoot();
         }
-        // console.log(snakedot);
-
         //新增头在画布上
         sdot.fillStyle="black";
         sdot.fillRect(snakedot[0][0],snakedot[0][1],10,10);
 
-        myVar = setTimeout("startmove()",70);
+        myVar = setTimeout("startmove()",speed_level);
     } else {
         console.log("game over");
         overdot.fillStyle = "DodgerBlue";

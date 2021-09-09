@@ -1,0 +1,41 @@
+button {
+    background-color: tomato;
+    color: aliceblue;
+    font-size: 16px;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#button_content {
+    position: absolute;
+    top:550px;
+}
+#setspeed {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown_content {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    min-width: 45px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.speed_li {
+    color: black;
+    padding: 15px 80px 15px 15px;
+    display: block;
+
+}
+.speed_li:hover {
+    background-color: rgb(235, 235, 235);
+}
+#setspeed:hover  #dropdown_content {
+    display: block;
+}

@@ -16,6 +16,7 @@ fdot.fillRect(50,50,10,10);
 var overdot = c.getContext("2d");
 
 var w;
+var speed_level = 250;
 
 function startWorker() {
     if(typeof(Worker) !== "undefined") {
@@ -57,7 +58,28 @@ function stopWorker() {
     w = undefined;
     clearTimeout(myVar);
     //console.log("stop");
+    document.getElementById("startbtn").innerHTML= "continue";
+
 }
+
+let sl = document.getElementsByClassName("speed_li");
+for (let i in sl) {
+    sl[i].addEventListener("click",function() { 
+        //console.log(this.innerHTML)
+        switch (this.innerHTML) {
+            case 'normal':
+                speed_level = 250;
+                break;
+            case 'fast':
+                speed_level = 150;
+                break;
+            case 'faster':
+                speed_level = 70;
+                break;
+        }
+    });
+};
+
 
 function cnvs_getCoordinates(e) {
     x=e.clientX;

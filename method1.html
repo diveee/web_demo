@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" type="text/css" href="m1.css" >
     <script type="text/javascript" src="act.js" defer></script>
     <script type="text/javascript" src="sm1.js" defer></script>
     <script type="text/javascript" src="sm1worker.js" defer></script>
@@ -18,6 +19,7 @@
             
         }
     </style>
+
 </head>
 <body id="sbd">
 
@@ -28,11 +30,23 @@
         onmousemove="cnvs_getCoordinates(event)" onmouseout="cnvs_clearCoordinates()"></canvas>
 
 
-        <div id="xycoordinates" style="position: absolute; left: 55px; top: 520px"></div>
+        <div id="xycoordinates" style="position: absolute; left: 150px; top: 520px"></div>
         <br>
 
-        <button style="position: absolute; top:520px;" onclick="startWorker();">开始</button>
-        <button style="position: absolute; top:550px;" onclick="stopWorker();">stop</button>
+        <div id="button_content">
+            <button id="startbtn" onclick="startWorker();">start</button>
+            <button onclick="stopWorker();">stop</button>
+
+            <div id="setspeed">
+                <button id="speedbtn">speed</button>
+                <ul id="dropdown_content">
+                    <li class="speed_li">normal</li>
+                    <li class="speed_li">fast</li>
+                    <li class="speed_li">faster</li>
+                </ul>
+            </div>
+            
+        </div>
     </div>
 </body>
 </html>
